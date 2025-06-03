@@ -32,9 +32,12 @@ function editItem(id, name, description) {
 //Handle Delete Requests
 async function deleteItem(id) {
   try {
-    const response = await fetch(`http://localhost:3500/item/delete/${id}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(
+      `https://demo-fullstack-demo.onrender.com/item/delete/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     if (response.ok) {
       console.log("Item deleted successfully");
       location.reload();
